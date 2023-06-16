@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*1679C7,134AA1,062033,123448,13425F*/
+
+
+*{
+    box-sizing: border-box; /*incorporar margens e paddings tudo dentro de uma caixa*/
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serifS; /*esse comando eu copio do site do google fontes*/
+    /*nesse comando eu estou falando que todo o texto do meu site será com a fonte "Roboto"*/
+    background: #0D263A;
+}
+
+/*navbar, classe criada barra de navegação*/
+.navbar{
+    display: flex; /*alinhar a logo "godxilla" e os links do menu de navegação em linha*/
+    /*"flex-flow: row wrap"está definindo a direção dos itens como uma linha 
+    (da esquerda para a direita) e permitindo que eles quebrem para uma nova linha, 
+    se necessário, para ajustar-se ao espaço disponível.*/
+    flex-flow: row wrap;
+    height: 100px; /*altura de 100px*/
+    background: #0B304D; /*cor de funco*/
+    justify-content: center; /*alinhamento dos itens de maneira correta(no sentido vertical)*/
+    align-items: center; /*alinhamento dos itens de maneira correta(no sentido vertical)*/
+    position: fixed; /*fixa a posição da navegaçãoS*/
+    width: 100%;
+}
+
+/*aqui se refere ao espaço onde há o nome GODXILLA AGIOTA no menu de navegação*/
+.logo{
+    flex: 20%; /*dividindo a parte superior da tela e ficando com 20% dela*/
+    margin-left: 10%; /*coloco uma maargem a esqueda de 10% do tamanho da tela*/
+    /* border: 1px solid red;   */
+    text-align: left; /*alinhando o texto ao centro (de maneira horizontal)*/
+}
+
+/* essa classe se refere ao texto "Godzilla Agiota" que está inserido no menu de navegação*/
+/*essa parte diz respeito apenas a configuração do texto, como fonte, cor e tmanho*/
+.logo h1{
+    font-family: 'Permanent Marker', cursive;
+    color: white; /*defino a cor do texto*/
+    font-size: 30px; /*defino o tamanho da fonte do texto*/
+}
+
+/*aqui se refere aos elementos que ficam dentro do menu de navegação, os links no caso 
+(não se refere a logo)*/
+.menu{
+    flex: 70%; /*dividindo a parte superior da tela e ficando com 70% dela*/
+    flex-flow: row wrap;
+    /* border: 1px solid black; */
+    text-align: right;/*alinhando o texto à direita (de maneira horizontal)*/
+    padding: 20px; /*preenche o espço em 20px*/
+}
+
+/*estilização(decoração) dos links na barra de navegação*/
+.menu a{
+    color: #1679C7; 
+    text-decoration: none; /*isso tira o sublinhado embaixo do link*/
+    /* border: 1px solid red;  */
+    font-size: 16px;
+    padding: 20px 16px; /*20px de altura por 16px de largura*/
+}
+
+/*o que acontece com os links do menu navegação quando o mouse estiver sobre eles*/
+.menu a:hover{
+    color: white;
+    border-top: 4px solid black; /*borda apennas no topo de 4px com essa determinada cor*/
+}
+
+/*botão do "Apostas AGORA no jogo do bicho"*/
+#botao{
+    background: #062033; /*cor de fundo*/
+    padding: 10px 25px; /*10px de altura por 25px de largura*/
+    color: white; /*cor do texto*/
+    border-radius: 5px; /*bordas arredondadas de 5px*/
+    margin-right: 10%; /*coloco uma maargem a direita de 10% do tamanho da tela*/
+    margin-left: 5%; /*afasto o botão "fale conosco" em 5% a esquerda, dos outros links*/
+}
+
+/*faaço isso pq o botão fica estilizado, com bugs, quando eu paço o mouse encima dele*/
+#botao:hover{
+    border: none; /*tiro a estilização que havia colocado em todos os links, linha 68*/
+    background: #126AE6; /*cor do botão quando eu passo o mouse encima dele*/
+}
+
+/*cabeçalho do site, é a parte onde tem a imagem e texto sobre a agencia*/
+.header{
+    display: flex;
+    /*"flex-flow: row wrap"está definindo a direção dos itens como uma linha 
+    (da esquerda para a direita) e permitindo que eles quebrem para uma nova linha, 
+    se necessário, para ajustar-se ao espaço disponível.*/
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 700px; /*altura de 600 px*/
+    background: #0D263A; /*cor de fundo*/
+    padding-top: 100px; /*preenchimento da parte de cima*/
+}
+
+/*classe que eu criei para colocar o texto da chamada pra ação*/
+.headline{
+    margin-left: 5%; /*afasto o botão "fale conosco" em 10% a esquerda*/
+    flex: 20%; /*pega 40% da pagina, no sentido horizontal, já que eu defini 600 px para essa
+    parte do site*/
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+.img-headline{
+    margin-right: 0%;
+    flex: 70%;
+    text-align: center;
+}
+
+.headline h2{
+    font-weight: 900;
+    font-size: 20px;
+    color: #1679C7;
+    padding: 0;
+    margin-top: 0;
+}
+
+.headline ul{
+    color: #134AA1;
+    text-align: left;
+}
+
+.contact-btn{
+    display: inline-block;
+    background: #123448;
+    padding: 20px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.contact-btn:hover{
+    background: #126AE6;
+}
+
+section{
+    display: inline-block;
+    margin-top: 80px;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* height: 400px; */
+    text-align: center;
+    padding: 0.5%;
+    /* width: 90%; */
+}
+
+section h2{
+    width: 100%;
+    font-size: 50px;
+    margin: 0;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: bold;
+    color: white;
+}
+
+
+.servicos{
+    display: inline-block;
+    margin-top: 5%;
+}
+
+.card-text{
+    color: #134AA1;
+}
+
+.card{
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    margin: 1%;
+    border: 1px solid #134AA1;
+    border-radius: 10px;  /* borda com cantos arredondados */
+    cursor: pointer; /*cursor com simbolo de mãozinha*/
+}
+
+/*estou dentro da classe card, referenciando "texto-oculto", apenas quando o cursor está encima*/
+.card:hover .texto-escondido{
+    display: block; /*AQUI O TEXTO APARECE*/
+}
+
+/*referenciando o elemento "texto-escondido"*/
+.texto-escondido{
+    display: none; /*disaparece*/
+}
+
+/*dentro do card porém só vai aparecer quando eu passar o mouse encima*/
+.card:hover{
+    background: #134AA1; /*cor de fundo*/
+    color: white; /*cor do texto*/
+    padding: 40px; /*preenchimento de 40px isso vai fazer a caixa aumentar de tamanho*/
+}
+
+/*estou dentro da classe card, referenciando as imagens, apenas quando o cursor está encima*/
+.card:hover img{
+    display: none; /*Aqui eu faço com que as imagens dispareçam*/
+}
+
+/*estou dentro da classe card, referenciando o texto agora, apenas quando o cursor está encima*/
+.card:hover .card-text{
+    display: none; /*Aqui eu faço com que os textos dispareçam*/
+}
+
+/*FOOTER*/
+footer{
+    margin-top: 100px;/*afastar da margem uns 100px*/
+    height: 400px;/*altura de 300px*/
+    background-image: linear-gradient(180deg, #134AA1,#13425F,#123448, #062033, black) /*background com efeito de degradê*/;
+    text-align: center; /*linhando o texto no centro*/
+    border-top: 5px solid #1679C7; /*colocar uma borda na parte de cima*/
+}
+
+.logo-rodape{
+    padding: 100px; /*vai afastar o texto do rodapé para o meio*/
+}
+
+.agencia{
+    font-family: 'Permanent Marker', cursive; /*definindo a fonte do texto*/
+    color: white;
+
+}
+
+.whats{
+    position: fixed; /*posição fixa*/
+    bottom: 5px; /*posição em relação a parte de baixo de 5px*/
+    right: 5px; /*posição a direita em 5px*/
+}
